@@ -1,22 +1,24 @@
 # Classical ML Homeworks
 
-This repository contains my coursework notebooks for an introductory machine learning track. The focus is practical classical ML: basic data work in Python, exploratory analysis, preprocessing, train / test splitting, model training, and evaluation with standard metrics. The folder names are kept in the original course submission format.
+This repository contains my coursework notebooks for an introductory machine learning track. The work is centered on practical classical ML in Python: data cleaning, exploratory analysis, preprocessing, feature engineering, train / validation / test splitting, model training, and evaluation with standard regression and classification metrics. The folder names are preserved in the original course submission format.
 
 ## What Is Covered Here
 
 - [`hw01_setup_tools`](hw01_setup_tools/hw01_setup_tools.ipynb): environment check, Jupyter setup, NumPy / Pandas basics, vectorization, and simple plotting
-- [`hw02_eda`](hw02_eda/hw02_eda.ipynb): Titanic exploratory data analysis, missing values, categorical handling, feature engineering, and visual inspection
-- [`hw03_knn`](hw03_knn/hw03_knn.ipynb): KNN classification on Iris with scaling, train / validation / test split, parameter comparison, and classification metrics
-- [`hw04_linear`](hw04_linear/hw04_linear.ipynb): linear regression workflow on Toyota data with cleaning, encoding, scaling, and comparison of `LinearRegression`, `Ridge`, and `Lasso`
-- [`hw05_logistic`](hw05_logistic/logreg_practice.ipynb): logistic regression from scratch on the breast cancer dataset and comparison with `scikit-learn`
+- [`hw02_eda`](hw02_eda/hw02_eda.ipynb): Titanic exploratory data analysis with missing values, categorical features, basic feature engineering, and visual inspection
+- [`hw03_knn`](hw03_knn/hw03_knn.ipynb): KNN classification on Iris with scaling, train / validation / test split, hyperparameter comparison, and classification metrics
+- [`hw04_linear`](hw04_linear/hw04_linear.ipynb): linear regression workflow on Toyota data with cleaning, EDA, encoding, scaling, feature engineering, and comparison of `LinearRegression`, `Ridge`, and `Lasso`
+- [`hw05_logistic`](hw05_logistic/logreg_practice.ipynb): logistic regression from scratch on the Breast Cancer Wisconsin dataset with gradient descent, log-loss, threshold tuning, and comparison with `scikit-learn`
+- [`hw07_decision_tree`](hw07_decision_tree/decision-tree-empty-cells.ipynb): decision tree classification with overfitting analysis, pre-pruning, post-pruning, grid search for hyperparameters, and handling missing values
 
 ## Topics / Methods
 
 - EDA, descriptive statistics, duplicates, missing values, correlations, and visualizations
-- preprocessing with `fillna`, feature engineering, one-hot encoding, and `StandardScaler`
-- train / validation / test splitting
+- preprocessing with `fillna`, one-hot encoding, feature engineering, scaling, and data splitting
+- train / validation / test workflows for both regression and classification tasks
 - model evaluation with accuracy, precision, recall, F1, ROC-AUC, confusion matrix, RMSE, MAE, and R^2
-- classical ML algorithms: KNN, linear regression, ridge, lasso, logistic regression
+- classical ML algorithms: KNN, linear regression, ridge, lasso, logistic regression, and decision trees
+- model regularization and control of overfitting through pruning and hyperparameter search
 
 ## Repository Structure
 
@@ -25,6 +27,7 @@ This repository contains my coursework notebooks for an introductory machine lea
 - `hw03_knn/`: KNN notebook and Iris dataset
 - `hw04_linear/`: linear regression notebook and Toyota dataset
 - `hw05_logistic/`: logistic regression practice notebook
+- `hw07_decision_tree/`: decision tree notebook focused on pruning and missing-value handling
 - `requirements.txt`: lightweight dependency list
 
 ## Tools Used
@@ -39,4 +42,4 @@ This repository contains my coursework notebooks for an introductory machine lea
 
 ## Note
 
-This is coursework and practice material, not a collection of polished standalone projects. I kept the repository structure close to the course workflow and used the README as the main overview layer.
+This is coursework and practice material, not a collection of polished standalone projects. The repository is intentionally kept close to the course workflow, and the README serves as a compact overview of the notebooks and covered ML topics.
