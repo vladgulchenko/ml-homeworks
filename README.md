@@ -1,36 +1,51 @@
 # Classical ML Homeworks
 
-This repository contains my coursework notebooks for an introductory machine learning track. The work is centered on practical classical ML in Python: data cleaning, exploratory analysis, preprocessing, feature engineering, train / validation / test splitting, model training, and evaluation with standard regression and classification metrics. The folder names are preserved in the original course submission format.
+Репозиторий с Jupyter-ноутбуками по классическому машинному обучению. Основной формат работ здесь не “конспект по теме”, а небольшие самостоятельные разборы: данные, очистка, признаки, модель, валидация и сравнение результатов.
 
-## What Is Covered Here
+Все ноутбуки лежат в исходном порядке домашних работ, но читаются как отдельные кейсы по классическому ML.
 
-- [`hw01_setup_tools`](hw01_setup_tools/hw01_setup_tools.ipynb): environment check, Jupyter setup, NumPy / Pandas basics, vectorization, and simple plotting
-- [`hw02_eda`](hw02_eda/hw02_eda.ipynb): Titanic exploratory data analysis with missing values, categorical features, basic feature engineering, and visual inspection
-- [`hw03_knn`](hw03_knn/hw03_knn.ipynb): KNN classification on Iris with scaling, train / validation / test split, hyperparameter comparison, and classification metrics
-- [`hw04_linear`](hw04_linear/hw04_linear.ipynb): linear regression workflow on Toyota data with cleaning, EDA, encoding, scaling, feature engineering, and comparison of `LinearRegression`, `Ridge`, and `Lasso`
-- [`hw05_logistic`](hw05_logistic/logreg_practice.ipynb): logistic regression from scratch on the Breast Cancer Wisconsin dataset with gradient descent, log-loss, threshold tuning, and comparison with `scikit-learn`
-- [`hw07_decision_tree`](hw07_decision_tree/decision-tree-empty-cells.ipynb): decision tree classification with overfitting analysis, pre-pruning, post-pruning, grid search for hyperparameters, and handling missing values
+## Ключевые ноутбуки
 
-## Topics / Methods
+Если открывать репозиторий не подряд, а с самых показательных работ, то лучше начать с этих трех:
 
-- EDA, descriptive statistics, duplicates, missing values, correlations, and visualizations
-- preprocessing with `fillna`, one-hot encoding, feature engineering, scaling, and data splitting
-- train / validation / test workflows for both regression and classification tasks
-- model evaluation with accuracy, precision, recall, F1, ROC-AUC, confusion matrix, RMSE, MAE, and R^2
-- classical ML algorithms: KNN, linear regression, ridge, lasso, logistic regression, and decision trees
-- model regularization and control of overfitting through pruning and hyperparameter search
+- [`hw04_linear/hw04_linear.ipynb`](hw04_linear/hw04_linear.ipynb)  
+  Сквозной регрессионный пайплайн на датасете Toyota Corolla: очистка данных, EDA, кодирование признаков, feature engineering и сравнение `LinearRegression`, `Ridge`, `Lasso`.
 
-## Repository Structure
+- [`hw07_decision_tree/decision-tree.ipynb`](hw07_decision_tree/decision-tree.ipynb)  
+  Деревья решений для классификации: переобучение, pre-pruning, post-pruning, подбор гиперпараметров и работа с пропусками.
 
-- `hw01_setup_tools/`: setup notebook and course notes
-- `hw02_eda/`: Titanic EDA notebook and local dataset files
-- `hw03_knn/`: KNN notebook and Iris dataset
-- `hw04_linear/`: linear regression notebook and Toyota dataset
-- `hw05_logistic/`: logistic regression practice notebook
-- `hw07_decision_tree/`: decision tree notebook focused on pruning and missing-value handling
-- `requirements.txt`: lightweight dependency list
+- [`hw09_forest/hw09_forest.ipynb`](hw09_forest/hw09_forest.ipynb)  
+  Продолжение Toyota-кейса с ансамблями: `RandomForestRegressor`, ручной подбор параметров, кросс-валидация и итоговое сравнение с `Ridge`.
 
-## Tools Used
+## Структура репозитория
+
+- [`hw01_setup_tools`](hw01_setup_tools/hw01_setup_tools.ipynb) — базовая настройка окружения, NumPy / Pandas, простые визуализации.
+- [`hw02_eda`](hw02_eda/hw02_eda.ipynb) — EDA на Titanic.
+- [`hw03_knn`](hw03_knn/hw03_knn.ipynb) — KNN на Iris с разбиением `train / validation / test`.
+- [`hw04_linear`](hw04_linear/hw04_linear.ipynb) — линейная регрессия на Toyota Corolla.
+- [`hw05_logistic`](hw05_logistic/logreg_practice.ipynb) — логистическая регрессия с нуля и сравнение со `scikit-learn`.
+- [`hw07_decision_tree`](hw07_decision_tree/decision-tree.ipynb) — деревья решений для классификации.
+- [`hw09_forest`](hw09_forest/hw09_forest.ipynb) — случайный лес для регрессии на Toyota Corolla.
+
+## Что покрывают работы
+
+- разведочный анализ данных и очистку признаков;
+- обработку пропусков и mixed-type значений;
+- one-hot encoding и feature engineering;
+- разбиение выборки, кросс-валидацию и `GridSearchCV`;
+- сравнение моделей на одинаковой постановке задачи;
+- оценку качества через `RMSE`, `MAE`, `R^2`, `accuracy`, `F1`, `ROC-AUC` и другие стандартные метрики.
+
+По моделям в репозитории есть:
+- KNN;
+- линейная регрессия, `Ridge`, `Lasso`;
+- логистическая регрессия;
+- деревья решений;
+- случайный лес.
+
+## Окружение
+
+Основные зависимости перечислены в [`requirements.txt`](requirements.txt):
 
 - Python
 - Jupyter Notebook
@@ -40,6 +55,17 @@ This repository contains my coursework notebooks for an introductory machine lea
 - Seaborn
 - scikit-learn
 
-## Note
+Датасеты, используемые в ноутбуках, уже лежат внутри соответствующих папок, поэтому после установки зависимостей репозиторий можно запускать локально без дополнительной подготовки данных.
 
-This is coursework and practice material, not a collection of polished standalone projects. The repository is intentionally kept close to the course workflow, and the README serves as a compact overview of the notebooks and covered ML topics.
+## Запуск
+
+Если окружение уже собрано, достаточно открыть нужный ноутбук в Jupyter.
+
+Если нужно поднять окружение с нуля:
+
+```bash
+pip install -r requirements.txt
+jupyter notebook
+```
+
+Если используется Conda, достаточно активировать свое окружение перед установкой зависимостей или запуском Jupyter.
