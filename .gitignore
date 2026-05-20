@@ -15,6 +15,10 @@ env/
 .ipynb_checkpoints/
 */.ipynb_checkpoints/
 
+# CatBoost training logs
+catboost_info/
+*/catboost_info/
+
 # OS
 .DS_Store
 Thumbs.db
