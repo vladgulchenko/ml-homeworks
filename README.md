@@ -6,13 +6,16 @@
 
 ## Ключевые ноутбуки
 
-Если открывать репозиторий не подряд, а с самых показательных работ, то лучше начать с этих четырех:
+Если открывать репозиторий не подряд, а с самых показательных работ, то лучше начать с этих ноутбуков:
 
 - [`hw04_linear/hw04_linear.ipynb`](hw04_linear/hw04_linear.ipynb)  
   Сквозной регрессионный пайплайн на датасете Toyota Corolla: очистка данных, EDA, кодирование признаков, feature engineering и сравнение `LinearRegression`, `Ridge`, `Lasso`.
 
 - [`hw07_decision_tree/decision-tree.ipynb`](hw07_decision_tree/decision-tree.ipynb)  
   Деревья решений для классификации: переобучение, pre-pruning, post-pruning, подбор гиперпараметров и работа с пропусками.
+
+- [`hw08_svm/svm_practice_student.ipynb`](hw08_svm/svm_practice_student.ipynb)  
+  Метод опорных векторов на Breast Cancer Wisconsin: сравнение SVM с масштабированием и без, `Pipeline`, `GridSearchCV`, анализ ошибок, confusion matrix и визуализация границы решений.
 
 - [`hw09_forest/hw09_forest.ipynb`](hw09_forest/hw09_forest.ipynb)  
   Продолжение Toyota-кейса с ансамблями: `RandomForestRegressor`, ручной подбор параметров, кросс-валидация и итоговое сравнение с `Ridge`.
@@ -28,6 +31,7 @@
 - [`hw04_linear`](hw04_linear/hw04_linear.ipynb) — линейная регрессия на Toyota Corolla.
 - [`hw05_logistic`](hw05_logistic/logreg_practice.ipynb) — логистическая регрессия с нуля и сравнение со `scikit-learn`.
 - [`hw07_decision_tree`](hw07_decision_tree/decision-tree.ipynb) — деревья решений для классификации.
+- [`hw08_svm`](hw08_svm/svm_practice_student.ipynb) — SVM для бинарной классификации опухолей: `LinearSVC`, `SVC`, масштабирование признаков, подбор `C`, `kernel`, `gamma`.
 - [`hw09_forest`](hw09_forest/hw09_forest.ipynb) — случайный лес для регрессии на Toyota Corolla.
 - [`hw10_gb`](hw10_gb/hw10_gb.ipynb) — градиентный бустинг для регрессии на California Housing, собственная реализация `MyBoost` и сравнение с XGBoost / LightGBM / CatBoost.
 
@@ -38,6 +42,9 @@
 - one-hot encoding и feature engineering;
 - разбиение выборки, кросс-валидацию и `GridSearchCV`;
 - сравнение моделей на одинаковой постановке задачи;
+- построение пайплайнов с масштабированием признаков;
+- анализ матрицы ошибок и ошибок классификации;
+- визуализацию границ решений для классификаторов;
 - ручную реализацию ансамблевых методов и проверку их свойств;
 - стохастический градиентный бустинг: подвыборка объектов, подвыборка признаков, важности признаков;
 - оценку качества через `RMSE`, `MAE`, `R^2`, `accuracy`, `F1`, `ROC-AUC` и другие стандартные метрики.
@@ -46,6 +53,7 @@
 - KNN;
 - линейная регрессия, `Ridge`, `Lasso`;
 - логистическая регрессия;
+- SVM: `LinearSVC`, `SVC` с линейным и RBF-ядром;
 - деревья решений;
 - случайный лес;
 - градиентный бустинг, включая собственную реализацию и библиотечные XGBoost, LightGBM, CatBoost.
