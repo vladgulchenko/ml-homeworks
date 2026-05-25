@@ -11,6 +11,9 @@
 - [`hw04_linear/hw04_linear.ipynb`](hw04_linear/hw04_linear.ipynb)  
   Сквозной регрессионный пайплайн на датасете Toyota Corolla: очистка данных, EDA, кодирование признаков, feature engineering и сравнение `LinearRegression`, `Ridge`, `Lasso`.
 
+- [`hw06_bayes/naive_bayes_practice_student.ipynb`](hw06_bayes/naive_bayes_practice_student.ipynb)  
+  Гауссовский Наивный Байес на Iris: реализация `MyGaussianNB` с нуля, оценка априорных вероятностей, средних и дисперсий, расчет log-likelihood, confusion matrix, сравнение со `sklearn.GaussianNB` и разбор допущения о независимости признаков.
+
 - [`hw07_decision_tree/decision-tree.ipynb`](hw07_decision_tree/decision-tree.ipynb)  
   Деревья решений для классификации: переобучение, pre-pruning, post-pruning, подбор гиперпараметров и работа с пропусками.
 
@@ -30,6 +33,7 @@
 - [`hw03_knn`](hw03_knn/hw03_knn.ipynb) — KNN на Iris с разбиением `train / validation / test`.
 - [`hw04_linear`](hw04_linear/hw04_linear.ipynb) — линейная регрессия на Toyota Corolla.
 - [`hw05_logistic`](hw05_logistic/logreg_practice.ipynb) — логистическая регрессия с нуля и сравнение со `scikit-learn`.
+- [`hw06_bayes`](hw06_bayes/naive_bayes_practice_student.ipynb) — Гауссовский Наивный Байес с нуля на Iris и сравнение со `scikit-learn`.
 - [`hw07_decision_tree`](hw07_decision_tree/decision-tree.ipynb) — деревья решений для классификации.
 - [`hw08_svm`](hw08_svm/svm_practice_student.ipynb) — SVM для бинарной классификации опухолей: `LinearSVC`, `SVC`, масштабирование признаков, подбор `C`, `kernel`, `gamma`.
 - [`hw09_forest`](hw09_forest/hw09_forest.ipynb) — случайный лес для регрессии на Toyota Corolla.
@@ -43,7 +47,9 @@
 - разбиение выборки, кросс-валидацию и `GridSearchCV`;
 - сравнение моделей на одинаковой постановке задачи;
 - построение пайплайнов с масштабированием признаков;
+- реализацию Наивного Байеса с нуля: priors, Gaussian likelihood, log-likelihood и предсказание по максимуму апостериорного score;
 - анализ матрицы ошибок и ошибок классификации;
+- проверку допущений модели через корреляции признаков внутри классов;
 - визуализацию границ решений для классификаторов;
 - ручную реализацию ансамблевых методов и проверку их свойств;
 - стохастический градиентный бустинг: подвыборка объектов, подвыборка признаков, важности признаков;
@@ -53,6 +59,7 @@
 - KNN;
 - линейная регрессия, `Ridge`, `Lasso`;
 - логистическая регрессия;
+- Гауссовский Наивный Байес: собственная реализация `MyGaussianNB` и `sklearn.GaussianNB`;
 - SVM: `LinearSVC`, `SVC` с линейным и RBF-ядром;
 - деревья решений;
 - случайный лес;
