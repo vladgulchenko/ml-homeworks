@@ -11,7 +11,7 @@
 - [`hw04_linear/hw04_linear.ipynb`](hw04_linear/hw04_linear.ipynb)  
   Сквозной регрессионный пайплайн на датасете Toyota Corolla: очистка данных, EDA, кодирование признаков, feature engineering и сравнение `LinearRegression`, `Ridge`, `Lasso`.
 
-- [`hw06_bayes/naive_bayes_practice_student.ipynb`](hw06_bayes/naive_bayes_practice_student.ipynb)  
+- [`hw06_bayes/naive_bayes.ipynb`](hw06_bayes/naive_bayes.ipynb)  
   Гауссовский Наивный Байес на Iris: реализация `MyGaussianNB` с нуля, оценка априорных вероятностей, средних и дисперсий, расчет log-likelihood, confusion matrix, сравнение со `sklearn.GaussianNB` и разбор допущения о независимости признаков.
 
 - [`hw07_decision_tree/decision-tree.ipynb`](hw07_decision_tree/decision-tree.ipynb)  
@@ -26,6 +26,9 @@
 - [`hw10_gb/hw10_gb.ipynb`](hw10_gb/hw10_gb.ipynb)  
   Градиентный бустинг для регрессии: сравнение XGBoost, LightGBM и CatBoost, а также доработка собственной реализации бустинга с `subsample`, `colsample_bytree`, `feature_importances_` и обработкой категориальных признаков.
 
+- [`hw11_hp/hp_interp.ipynb`](hw11_hp/hp_interp.ipynb)  
+  Подбор гиперпараметров и интерпретируемость на Breast Cancer Wisconsin: baseline через 5-fold CV, `GridSearchCV` для SVM, `RandomizedSearchCV` для RandomForest, честная финальная оценка на test, Permutation Importance, PDP/ICE, SHAP и диагностика утечек через `leaky_feature`.
+
 ## Структура репозитория
 
 - [`hw01_setup_tools`](hw01_setup_tools/hw01_setup_tools.ipynb) — базовая настройка окружения, NumPy / Pandas, простые визуализации.
@@ -33,11 +36,12 @@
 - [`hw03_knn`](hw03_knn/hw03_knn.ipynb) — KNN на Iris с разбиением `train / validation / test`.
 - [`hw04_linear`](hw04_linear/hw04_linear.ipynb) — линейная регрессия на Toyota Corolla.
 - [`hw05_logistic`](hw05_logistic/logreg_practice.ipynb) — логистическая регрессия с нуля и сравнение со `scikit-learn`.
-- [`hw06_bayes`](hw06_bayes/naive_bayes_practice_student.ipynb) — Гауссовский Наивный Байес с нуля на Iris и сравнение со `scikit-learn`.
+- [`hw06_bayes`](hw06_bayes/naive_bayes.ipynb) — Гауссовский Наивный Байес с нуля на Iris и сравнение со `scikit-learn`.
 - [`hw07_decision_tree`](hw07_decision_tree/decision-tree.ipynb) — деревья решений для классификации.
 - [`hw08_svm`](hw08_svm/svm_practice_student.ipynb) — SVM для бинарной классификации опухолей: `LinearSVC`, `SVC`, масштабирование признаков, подбор `C`, `kernel`, `gamma`.
 - [`hw09_forest`](hw09_forest/hw09_forest.ipynb) — случайный лес для регрессии на Toyota Corolla.
 - [`hw10_gb`](hw10_gb/hw10_gb.ipynb) — градиентный бустинг для регрессии на California Housing, собственная реализация `MyBoost` и сравнение с XGBoost / LightGBM / CatBoost.
+- [`hw11_hp`](hw11_hp/hp_interp.ipynb) — подбор гиперпараметров, сравнение моделей и интерпретация RandomForest через PI, PDP/ICE и SHAP.
 
 ## Что покрывают работы
 
@@ -53,6 +57,9 @@
 - визуализацию границ решений для классификаторов;
 - ручную реализацию ансамблевых методов и проверку их свойств;
 - стохастический градиентный бустинг: подвыборка объектов, подвыборка признаков, важности признаков;
+- подбор гиперпараметров через `RandomizedSearchCV`;
+- интерпретацию моделей через `feature_importances_`, Permutation Importance, PDP/ICE и SHAP;
+- диагностику подозрительных признаков, утечек target и шумовых переменных;
 - оценку качества через `RMSE`, `MAE`, `R^2`, `accuracy`, `F1`, `ROC-AUC` и другие стандартные метрики.
 
 По моделям в репозитории есть:
@@ -83,7 +90,11 @@
 - LightGBM
 - CatBoost
 
-Датасеты, используемые в ноутбуках, уже лежат внутри соответствующих папок, поэтому после установки зависимостей репозиторий можно запускать локально без дополнительной подготовки данных.
+Для ноутбука [`hw11_hp`](hw11_hp/hp_interp.ipynb) дополнительно используются:
+
+- SHAP
+
+Датасеты, используемые в ноутбуках, уже лежат внутри соответствующих папок или загружаются через `sklearn.datasets`, поэтому после установки зависимостей репозиторий можно запускать локально без дополнительной подготовки данных.
 
 ## Запуск
 
@@ -94,6 +105,12 @@
 ```bash
 pip install -r requirements.txt
 jupyter notebook
+```
+
+Для `hw11_hp`, если SHAP или Optuna не установлены:
+
+```bash
+pip install shap optuna
 ```
 
 Если используется Conda, достаточно активировать свое окружение перед установкой зависимостей или запуском Jupyter.
