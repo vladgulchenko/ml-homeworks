@@ -32,6 +32,9 @@
 - [`hw12_DBSCAN/clustering2_practice.ipynb`](hw12_DBSCAN/clustering2_practice.ipynb)  
   Плотностная кластеризация DBSCAN: k-distance plot и подбор `eps`, сравнение с K-Means на `make_moons` и `make_circles`, анализ влияния `eps` / `min_samples`, применение к Wine, разбор шумовых точек и сравнение силуэта с учетом ограничений метрики.
 
+- [`hw13_pca/pca_practice.ipynb`](hw13_pca/pca_practice.ipynb)  
+  Снижение размерности на `digits`: PCA с выбором числа компонент по cumulative explained variance, интерпретация loadings, сравнение классификации до и после PCA, 2D-визуализации через PCA, t-SNE и UMAP, silhouette score и реконструкция изображений через `inverse_transform`.
+
 ## Структура репозитория
 
 - [`hw01_setup_tools`](hw01_setup_tools/hw01_setup_tools.ipynb) — базовая настройка окружения, NumPy / Pandas, простые визуализации.
@@ -46,6 +49,7 @@
 - [`hw10_gb`](hw10_gb/hw10_gb.ipynb) — градиентный бустинг для регрессии на California Housing, собственная реализация `MyBoost` и сравнение с XGBoost / LightGBM / CatBoost.
 - [`hw11_hp`](hw11_hp/hp_interp.ipynb) — подбор гиперпараметров, сравнение моделей и интерпретация RandomForest через PI, PDP/ICE и SHAP.
 - [`hw12_DBSCAN`](hw12_DBSCAN/clustering2_practice.ipynb) — DBSCAN для нелинейной кластеризации на `make_moons`, `make_circles` и Wine.
+- [`hw13_pca`](hw13_pca/pca_practice.ipynb) — снижение размерности: PCA, t-SNE, UMAP, loadings, silhouette score и реконструкция изображений.
 
 ## Что покрывают работы
 
@@ -63,6 +67,7 @@
 - стохастический градиентный бустинг: подвыборка объектов, подвыборка признаков, важности признаков;
 - подбор гиперпараметров через `RandomizedSearchCV`;
 - интерпретацию моделей через `feature_importances_`, Permutation Importance, PDP/ICE и SHAP;
+- снижение размерности через PCA, выбор числа компонент по explained variance, визуализацию t-SNE / UMAP и анализ PCA-реконструкции;
 - диагностику подозрительных признаков, утечек target, шумовых переменных и шумовых объектов в кластеризации;
 - оценку качества через `RMSE`, `MAE`, `R^2`, `accuracy`, `F1`, `ROC-AUC`, silhouette score и другие стандартные метрики.
 
@@ -76,6 +81,7 @@
 - случайный лес;
 - градиентный бустинг, включая собственную реализацию и библиотечные XGBoost, LightGBM, CatBoost;
 - DBSCAN и K-Means для задач кластеризации.
+- PCA, t-SNE и UMAP для снижения размерности и визуализации данных.
 
 ## Окружение
 
@@ -98,6 +104,10 @@
 Для ноутбука [`hw11_hp`](hw11_hp/hp_interp.ipynb) дополнительно используются:
 
 - SHAP
+
+Для ноутбука [`hw13_pca`](hw13_pca/pca_practice.ipynb) дополнительно может использоваться:
+
+- umap-learn
 
 Датасеты, используемые в ноутбуках, уже лежат внутри соответствующих папок или загружаются через `sklearn.datasets`, поэтому после установки зависимостей репозиторий можно запускать локально без дополнительной подготовки данных.
 
